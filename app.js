@@ -132,7 +132,7 @@ servidor.post('/loja/pedido/completo', (req, resp) => {
 
   let valorParcela = total / parcelas
 
-  resp.send({
+  resp.status(401).send({
     total: total,
     qtdParcelas: parcelas,
     valorParcela: valorParcela
